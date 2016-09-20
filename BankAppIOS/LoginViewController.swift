@@ -31,28 +31,30 @@ class LoginViewController: UIViewController,UITextFieldDelegate,UITextViewDelega
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        
         return true
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {    //delegate method
-        var isOk = true
-        
-        if (textField != self.userName && self.userName.isEqual("")) {
-            isOk = false
-            
-        }else if(textField != self.passWord && self.passWord.isEqual("")) {
-            isOk = false
-        }
-        
-        if(isOk) {
-            self.loginPress.isEnabled = true
-            self.loginPress.alpha = 1
-        }else {
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        let usernameStr:NSString = self.userName.text! as NSString
+        let passwordStr:NSString = self.passWord.text! as NSString
+        print(usernameStr.length , passwordStr.length)
+        if(usernameStr.length < 1 || passwordStr.length < 1){
             self.loginPress.isEnabled = false
             self.loginPress.alpha = 0.4
+        }else{
+            self.loginPress.isEnabled = true
+            self.loginPress.alpha = 1
         }
+        
+        return true
     }
     
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool{
+        print(textField.text);
+        return true;
+    }
     
 
 }

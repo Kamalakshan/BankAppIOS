@@ -88,6 +88,7 @@
 				TargetAttributes = {
 					103B12CA1D90DA1700C1615F = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 4HELFC9WFU;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -252,6 +253,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4HELFC9WFU;
 				INFOPLIST_FILE = BankAppIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.BankAppIOS;
@@ -264,6 +266,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4HELFC9WFU;
 				INFOPLIST_FILE = BankAppIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.BankAppIOS;
