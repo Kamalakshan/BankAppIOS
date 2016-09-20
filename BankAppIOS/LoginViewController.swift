@@ -18,8 +18,6 @@ class LoginViewController: UIViewController,UITextFieldDelegate,UITextViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-       // self.userName.delegate = self
-        //self.passWord.delegate = self
         self.loginPress.isEnabled = false
         self.loginPress.alpha = 0.4
     }
@@ -37,22 +35,40 @@ class LoginViewController: UIViewController,UITextFieldDelegate,UITextViewDelega
     
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        let usernameStr:NSString = self.userName.text! as NSString
-        let passwordStr:NSString = self.passWord.text! as NSString
-        print(usernameStr.length , passwordStr.length)
-        if(usernameStr.length < 1 || passwordStr.length < 1){
-            self.loginPress.isEnabled = false
-            self.loginPress.alpha = 0.4
-        }else{
-            self.loginPress.isEnabled = true
-            self.loginPress.alpha = 1
-        }
+
+        
+        return true
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        print("textFieldShouldClear: \(textField.text)  ")
+        
+        self.loginPress.isEnabled = false
+        self.loginPress.alpha = 0.4
         
         return true
     }
     
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool{
+        var isOk = true
+        if(textField != self.userName && self.userName.text == "") {
+            isOk = false
+        }else if (textField != self.passWord && self.passWord.text == "") {
+            isOk = false
+        }else if(range.location == 0 && string == "") {
+            isOk = false
+        }
         print(textField.text);
+        print("string: \(string)")
+        print("range.length:\(range.length), range.location:\(range.location)")
+        
+        if(isOk) {
+            self.loginPress.isEnabled = true
+            self.loginPress.alpha = 1
+        }else{
+            self.loginPress.isEnabled = false
+            self.loginPress.alpha = 0.4
+        }
         return true;
     }
     
