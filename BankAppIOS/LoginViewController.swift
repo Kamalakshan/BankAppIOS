@@ -34,15 +34,15 @@ class LoginViewController: UIViewController,UITextFieldDelegate,UITextViewDelega
         return true
     }
     
-      func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         var isOk = true
         
-        if (textView != self.userName && self.userName.isEqual("")) {
+        if (textField != self.userName && self.userName.isEqual("")) {
             isOk = false
             
-        }else if(textView != self.passWord && self.passWord.isEqual("")) {
+        }else if(textField != self.passWord && self.passWord.isEqual("")) {
             isOk = false
-        }else if(range.location == 0 && text.isEmpty  ) {
+        }else if(range.location == 0 && string.isEmpty  ) {
             isOk = false
         }
         
@@ -53,10 +53,11 @@ class LoginViewController: UIViewController,UITextFieldDelegate,UITextViewDelega
             self.loginPress.isEnabled = false
             self.loginPress.alpha = 0.4
         }
-    
+        
         return true
+
     }
-    
+  
 
 }
 
