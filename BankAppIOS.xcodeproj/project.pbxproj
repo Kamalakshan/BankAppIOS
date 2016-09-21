@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		10173F041D92360700AC56B2 /* BankAppIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173F031D92360700AC56B2 /* BankAppIOSTests.swift */; };
+		10173F0C1D926EA700AC56B2 /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173F0B1D926EA600AC56B2 /* UserLogin.swift */; };
 		103B12CF1D90DA1700C1615F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103B12CE1D90DA1700C1615F /* AppDelegate.swift */; };
 		103B12D11D90DA1700C1615F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103B12D01D90DA1700C1615F /* LoginViewController.swift */; };
 		103B12D41D90DA1700C1615F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 103B12D21D90DA1700C1615F /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		10173F011D92360700AC56B2 /* BankAppIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankAppIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10173F031D92360700AC56B2 /* BankAppIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAppIOSTests.swift; sourceTree = "<group>"; };
 		10173F051D92360700AC56B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10173F0B1D926EA600AC56B2 /* UserLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 		103B12CE1D90DA1700C1615F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		103B12D01D90DA1700C1615F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		103B12D31D90DA1700C1615F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			children = (
 				103B12CE1D90DA1700C1615F /* AppDelegate.swift */,
 				103B12D01D90DA1700C1615F /* LoginViewController.swift */,
+				10173F0B1D926EA600AC56B2 /* UserLogin.swift */,
 				103B12D21D90DA1700C1615F /* Main.storyboard */,
 				103B12D51D90DA1700C1615F /* Assets.xcassets */,
 				103B12D71D90DA1700C1615F /* LaunchScreen.storyboard */,
@@ -333,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10173F0C1D926EA700AC56B2 /* UserLogin.swift in Sources */,
 				103B12D11D90DA1700C1615F /* LoginViewController.swift in Sources */,
 				103B12CF1D90DA1700C1615F /* AppDelegate.swift in Sources */,
 			);

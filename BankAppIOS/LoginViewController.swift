@@ -21,6 +21,26 @@ class LoginViewController: UIViewController,UITextFieldDelegate,UITextViewDelega
         // Do any additional setup after loading the view, typically from a nib.
         self.loginPress.isEnabled = false
         self.loginPress.alpha = 0.4
+        
+        Alamofire.request("https://httpbin.org/get").responseJSON { response in
+            print("Request: \(response.request!)")  // original URL request
+            print("response:\(response.response!)") // HTTP URL response
+            print("data:\(response.data!)")     // server data
+            print("result:\(response.result)")   // result of response serialization
+            
+            
+            if let JSON = response.result.value {
+                //print("JSON: \(JSON) \n\n")
+                let reponse =  JSON as! NSDictionary
+                //print("junny\n")
+                print(reponse.object(forKey: "origin"))
+                let headers = reponse.object(forKey: "headers") as! NSDictionary
+                let host = headers.object(forKey: "Host") as! String
+                print("host = \(host)")
+            }
+        }
+        let testuserLogin  = UserLogin(foruserName:"name", forpassWord:"pass",fordevno:"123")
+        testuserLogin.login()
     }
 
     override func didReceiveMemoryWarning() {
