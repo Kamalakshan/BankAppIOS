@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate  {
 
@@ -49,7 +50,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate,UITextViewDelega
         return true
     }
     
-    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool{
+    open func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool{
         var isOk = true
         if(textField != self.userName && self.userName.text == "") {
             isOk = false

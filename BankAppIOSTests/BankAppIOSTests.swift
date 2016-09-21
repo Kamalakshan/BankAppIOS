@@ -2,12 +2,13 @@
 //  BankAppIOSTests.swift
 //  BankAppIOSTests
 //
-//  Created by frankie on 16/9/20.
+//  Created by frankie on 16/9/21.
 //  Copyright © 2016年 frankie. All rights reserved.
 //
 
 import XCTest
-@testable import BankAppIOS
+import Alamofire
+
 
 class BankAppIOSTests: XCTestCase {
     
