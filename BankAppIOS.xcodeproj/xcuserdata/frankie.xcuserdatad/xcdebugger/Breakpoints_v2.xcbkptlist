@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BankAppIOS/LoginViewController.swift"
-            timestampString = "496159549.591927"
+            timestampString = "496219586.202386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "LoginViewController"
             landmarkType = "3">
          </BreakpointContent>
